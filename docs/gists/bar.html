@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Handling the First Item Differently in a Loop in UiPath - rpapub.cprima.net</title>
+
+    <link rel="stylesheet" href=/assets/css/reset.css />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href=/assets/css/bulma-custom-theme.css />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-solarizedlight.min.css" />
+    <link rel="stylesheet" href=/assets/css/prism-custom.css />
+    <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/themes/default.css" />
+    <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/webawesome.loader.js"></script>
+    <link rel="stylesheet" href=/assets/css/webawesome-custom.css />
+    <script src="https://kit.fontawesome.com/5df958b77d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href=/assets/css/fontawesome-custom.css />
+
+    <!-- Project Color Preferences -->
+    <link rel="stylesheet" href=/assets/css/project-colors.css />
+    <!-- Layout -->
+    <link rel="stylesheet" href=/assets/css/layout-base.css />
+    <link rel="stylesheet" href=/assets/css/layout-navbar.css />
+    <link rel="stylesheet" href=/assets/css/layout-sidebar.css />
+    <link rel="stylesheet" href=/assets/css/fonts.css />
+
+  <link rel="stylesheet" href=/assets/css/gists.css />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-basic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-vbnet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-powershell.min.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="title is-3">Home - rpapub.cprima.net</h1>
+    </header>
+
+    <!-- Navbar -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const $navbarBurgers = Array.prototype.slice.call(
+      document.querySelectorAll('.navbar-burger'),
+      0
+    );
+    $navbarBurgers.forEach((el) => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  });
+</script>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href=/>
+      <!--img src="/assets/images/logo.png" alt="Logo" -->
+      <i class="fa-icon fa-duotone fa-regular fa-rocket-launch"></i>
+    </a>
+    <a role="button" class="navbar-burger" id="burger" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="#"><i class="fas fa-code"></i> Snippets</a>
+      <a class="navbar-item" href="#"
+        ><i class="fas fa-graduation-cap"></i> UiPath Core 301</a
+      >
+      <a class="navbar-item" href="#"><i class="fas fa-box"></i> Chocolatey</a>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Main Content -->
+    <div class="container is-max-widescreen">
+        <main class="columns is-variable is-8">
+            <!-- Main Content Section -->
+            <div class="column is-12-mobile is-8-desktop is-8-widescreen is-8-fullhd main-content">
+                bar content
+
+<div class="gist-container">
+  <script src="https://gist.github.com/cprima/4f182a0303e09b7b0398bd403abf100d.js"></script>
+</div>
+
+            </div>
+
+            <!-- Sidebar Section -->
+            <div class="column is-12-mobile is-4-desktop is-3-widescreen is-3-fullhd sidebar">
+<aside>
+  <aside>
+    <h3 class="title is-5">Gists</h3>
+    <ul>
+      
+      <li><a href="/gists/bar.html">Handling the First Item Differently in a Loop in UiPath</a></li>
+    
+      <li><a href="/gists/foo.html">InvokeCode template</a></li>
+    
+    </ul>
+  </aside>
+<aside>
+  <h3 class="title is-5">UiPath Core 301</h3>
+  <ul>
+  
+    <li><a href="/uipath-core-301/bar.html">bar</a></li>
+  
+    <li><a href="/uipath-core-301/foo.html">foo</a></li>
+  
+    <li><a href="/uipath-core-301/intro.html">intro</a></li>
+  
+  </ul>
+</aside>
+<aside>
+  <h3 class="title is-5">Icons</h3>
+  <i class="fa-solid fa-user"></i>
+  <i class="fa-regular fa-user"></i>
+  <i class="fa-light fa-user"></i>
+  <i class="fa-thin fa-user"></i>
+</aside>
+<aside>
+  <h3 class="title is-5">Sidebar</h2>
+  <ul>
+    <li><a href=/ >Home</a></li>
+    <li><a href=/v2.html >Home v2</a></li>
+    <li><a href=/presentation.html >Presentation</a></li>
+  </ul>
+</aside>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+  <p>
+    Copyright © 2024 Christian Prior-Mamulyan · Licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+      >CC BY 4.0</a
+    >.
+  </p>
+  <p>To empower RPA developers with the knowledge, tools, and methodologies needed to design scalable, maintainable, and robust automation workflows. Through a series of practical, hands-on lessons, this syllabus bridges the gap between entry-level process automation and advanced development practices, fostering a mindset of continuous improvement, modularity, and test-driven excellence. The goal is to enable developers to create enterprise-grade solutions that enhance productivity, ensure long-term success, and prepare them for the future of intelligent automation.</p>
+</footer>
+    <script src=/assets/js/app.js></script>
+</body>
+
+</html>

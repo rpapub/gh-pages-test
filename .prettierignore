@@ -1,0 +1,35 @@
+# Ignore compiled files and directories
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+
+# Ignore assets and build output
+node_modules/
+dist/
+tmp/
+vendor/
+
+# Ignore Jekyll configuration files
+Gemfile
+Gemfile.lock
+_config.yml
+_config*.yml
+
+# Ignore image and binary assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.ico
+
+# Ignore specific file types
+*.min.js
+*.min.css
+*.map
+
+# Ignore Markdown files (optional, if you don't want Prettier to format them)
+*.md
+*.markdown

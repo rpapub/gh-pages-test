@@ -1,0 +1,65 @@
+pre[class*="language-"], code[class*="language-"] {
+    background-color: #eee8d5 !important; /* Base2 */
+    color: #586e75; /* Base00 */
+    padding: 1rem; /* Uniform padding for better spacing */
+    border-radius: 5px; /* Rounded corners */
+    overflow-x: auto; /* Horizontal scrolling for long lines */
+    box-shadow: none; /* Remove unnecessary shadowing */
+    white-space: pre-wrap; /* Prevent overflow or token splitting */
+    word-break: break-word; /* Ensure content wraps properly */
+  }
+
+  /* Specific to inline <code> */
+  code[class*="language-"] {
+    padding: 0.2rem 0.4rem; /* Inline code spacing */
+    white-space: normal; /* Inline code should flow naturally */
+  }
+
+  /* Line Numbers Fix (if present) */
+  pre[class*="language-"] > code {
+    display: block;
+    white-space: pre; /* Ensure code block integrity */
+  }
+
+  /* Tokens Styling for Solarized */
+  .token.comment, .token.prolog, .token.doctype, .token.cdata {
+    color: #93a1a1; /* Base1 */
+    font-style: italic;
+  }
+
+  .token.punctuation {
+    color: #586e75; /* Base00 */
+  }
+
+  .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
+    color: #dc322f; /* Red */
+  }
+
+  .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+    color: #2aa198; /* Cyan */
+  }
+
+  .token.operator, .token.entity, .token.url, .token.variable {
+    color: #268bd2; /* Blue */
+  }
+
+  .token.function {
+    color: #b58900; /* Yellow */
+  }
+
+  .token.keyword {
+    color: #859900; /* Green */
+  }
+/* Add styles for new token types in C# */
+.token.class-name {
+  color: #268bd2; /* Blue */
+  font-weight: bold;
+}
+
+.token.variable {
+  color: #6c71c4; /* Violet */
+}
+
+.token.property {
+  color: #b58900; /* Yellow */
+}

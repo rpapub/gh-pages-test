@@ -1,0 +1,3 @@
+  <header class="bg-[var(--header-bg)] text-[var(--header-text)] text-center p-4 shadow">
+    <h1 class="text-3xl font-bold">{% if title %}{{ site.title }} - {{ title | escape }}{% elsif page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{ site.title | escape }}{% endif %}</h1>
+  </header>

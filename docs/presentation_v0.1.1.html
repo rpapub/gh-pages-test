@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>rpapub.cprima.net</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="/assets/reveal.js-5.1.0/dist/reveal.css">
+		<link rel="stylesheet" href="/assets/reveal.js-5.1.0/dist/theme/solarized.css" id="theme">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-solarizedlight.min.css" />
+		<link rel="stylesheet" href=/assets/css/prism-custom.css />
+
+		<link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/themes/default.css" />
+		<script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/webawesome.loader.js"></script>
+		<link rel="stylesheet" href=/assets/css/webawesome-custom.css />
+		<script src="https://kit.fontawesome.com/5df958b77d.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href=/assets/css/fontawesome-custom.css />
+		<link rel="stylesheet" href=/assets/css/project-colors.css />
+		<link rel="stylesheet" href=/assets/css/fonts.css />
+		<link rel="stylesheet" href="/assets/reveal.js-5.1.0/plugin/cpmBroadcastdesign/cpmBroadcastdesign.css">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-basic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-vbnet.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-powershell.min.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+                <section>
+  <section data-ticker='{"visibility": "visible", "tickertext": "foobar" }'>
+    <h1>Slide 3</h1>
+  </section>
+
+  <section data-ticker='{"visibility": "visible"}'>
+    <h1>Slide 4</h1>
+  </section>
+
+  <section data-ticker='{"visibility": "foo"}'>
+    <h1>Slide 5</h1>
+  </section>
+
+  <section data-ticker='{"visibility": "visible"}' data-lower-third='{"visibility": "expanded", "layout": "one-line", "content": {"line1": "Foobar"}}'>
+    <h1>Slide 6</h1>
+  </section>
+
+  <section data-lower-third='{"visibility": "expanded", "layout": "two-line", "content": {"line1": "Foo", "line2": "Bar"}}'>
+    <h1>Slide 7</h1>
+  </section>
+</section>
+
+
+<section>
+
+  <section data-lower-third='{"visibility": "collapsed", "layout": "two-line", "content": {"line1": "Title", "line2": "Subtitle"}}'>
+    <h2>Example Code</h2>
+    <pre class="r-stretch r-fit-text"><code data-trim data-noescape>
+    # Load the project.json file as a JSON object from the specified or default directory
+    $projectJsonPath = Join-Path -Path $DirectoryPath -ChildPath "project.json"
+    $projectJson = Get-Content $projectJsonPath -Raw | ConvertFrom-Json
+    
+    # Retrieve the latest commit message from the git log
+    $commitMessage = (cd $DirectoryPath && git log --format=%B -n 1) -join " "
+    
+    # Increment the Semantic Version based on the latest commit message
+    $incrementedVersion = Increment-SemVer -semVerString $projectJson.projectVersion -commitMessage $commitMessage
+    
+    # Update the projectVersion in the JSON object
+    $projectJson.projectVersion = $incrementedVersion
+    
+    # Convert the JSON object back to a JSON formatted string and save it to the project.json file in the specified or default directory
+    $projectJson | ConvertTo-Json -Depth 99 | Set-Content $projectJsonPath
+    
+    # Stage the modified project.json for commit, suppressing e.g. untracked file output
+    git add $projectJsonPath 2>$null
+    
+    # Commit the version update to the repository with a message noting the new version number
+    git commit -m "Version bump in project.json to new version $incrementedVersion" --quiet
+    
+    # Push the commit to the remote repository
+    # Uncomment if you really want this script to push
+    #git push</code></pre>
+    
+    </section>
+  <section>
+    <h2>Python</h2>
+    <pre><code class="language-python">def greet(name):
+  return f"Hello, {name}!"
+  
+print(greet("World"))</code></pre>
+  </section>
+
+  <section>
+    <h2>VisualBasic</h2>
+    <pre><code class="language-vbnet">Public Function AddNumbers(a As Integer, b As Integer) As Integer
+      Return a + b
+End Function</code></pre>
+  </section>
+
+  <section>
+    <h2>CSharp</h2>
+    <pre><code class="language-csharp">public class Calculator
+{
+  public int AddNumbers(int a, int b)
+  {
+    return a + b;
+  }
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>PowerShell</h2>
+    <pre><code class="language-powershell">function Get-Greeting {
+  param([string]$Name)
+  "Hello, $Name!"
+}
+  
+Get-Greeting -Name "World"</code></pre>
+  </section>
+</section>
+
+<section>
+  <section>
+    <wa-image-comparer>
+      <img slot="before"
+        src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80&sat=-100&bri=-5"
+        alt="Grayscale version of kittens in a basket looking around." />
+      <img slot="after"
+        src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+        alt="Color version of kittens in a basket looking around." />
+    </wa-image-comparer>
+  </section>
+  <section>
+    <wa-carousel pagination navigation mouse-dragging loop>
+      <wa-carousel-item>
+        <img alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
+          src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=10" />
+      </wa-carousel-item>
+      <wa-carousel-item>
+        <img alt="A river winding through an evergreen forest (by Luca Bravo on Unsplash)"
+          src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=10" />
+      </wa-carousel-item>
+      <wa-carousel-item>
+        <img alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
+          src="https://images.unsplash.com/photo-1499002238440-d264edd596ec?q=10" />
+      </wa-carousel-item>
+      <wa-carousel-item>
+        <img alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
+          src="https://images.unsplash.com/photo-1475113548554-5a36f1f523d6?q=10" />
+      </wa-carousel-item>
+      <wa-carousel-item>
+        <img alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
+          src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=10" />
+      </wa-carousel-item>
+    </wa-carousel>
+  </section>
+
+</section>
+
+<section>
+  <section data-background="#00ffff">
+    <h2>data-background: #00ffff</h2>
+  </section>
+
+  <section data-background="#bb00bb">
+    <h2>data-background: #bb00bb</h2>
+  </section>
+</section>
+
+			</div>
+
+		</div>
+
+		<script src="/assets/reveal.js-5.1.0/dist/reveal.js"></script>
+		<script src="/assets/reveal.js-5.1.0/plugin/zoom/zoom.js"></script>
+		<script src="/assets/reveal.js-5.1.0/plugin/notes/notes.js"></script>
+		<script src="/assets/reveal.js-5.1.0/plugin/search/search.js"></script>
+		<script src="/assets/reveal.js-5.1.0/plugin/markdown/markdown.js"></script>
+		<script src="/assets/reveal.js-5.1.0/plugin/highlight/highlight.js"></script>
+		<script src="/assets/reveal.js-5.1.0/plugin/appearance/appearance.js"></script>
+		<!-- script src="/assets/reveal.js-5.1.0/plugin/verticator/verticator.js"></script -->
+		<script src="/assets/reveal.js-5.1.0/plugin/cpmBroadcastdesign/plugin.js"></script>
+<script>
+
+			// Full list of configuration options:
+			// https://revealjs.revealjs.com/config/
+			Reveal.initialize({
+				center: true,
+
+				transition: 'linear',
+				// transitionSpeed: 'slow',
+				// backgroundTransition: 'slide'
+
+				cpmBroadcastdesign: {
+					defaults: { tickertext: "Copyright © 2024 Christian Prior-Mamulyan · License CC BY-SA 4.0",
+					visibility: "visible" },
+				},
+				plugins: [ RevealNotes, RevealMarkdown, RevealHighlight, cpmBroadcastdesign  ]
+			});
+			// Ensure Prism.js highlights code after Reveal.js loads
+			Reveal.addEventListener('slidechanged', function(event) {
+				Prism.highlightAll();
+			});
+		</script>
+
+	</body>
+</html>

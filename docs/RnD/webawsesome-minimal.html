@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Awesome Dropdown Example</title>
+<link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/themes/default.css" />
+<script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/webawesome.loader.js"></script>
+
+  </head>
+  <body>
+    <h1>Web Awesome Dropdown Example</h1>
+
+    <!-- Shoelace Dropdown -->
+    <wa-dropdown>
+        <wa-button slot="trigger" caret>Dropdown</wa-button>
+        <wa-menu>
+          <wa-menu-item>Dropdown Item 1</wa-menu-item>
+          <wa-menu-item>Dropdown Item 2</wa-menu-item>
+          <wa-menu-item>Dropdown Item 3</wa-menu-item>
+          <wa-divider></wa-divider>
+          <wa-menu-item type="checkbox" checked>Checkbox</wa-menu-item>
+          <wa-menu-item disabled>Disabled</wa-menu-item>
+          <wa-divider></wa-divider>
+          <wa-menu-item>
+            Prefix
+            <wa-icon slot="prefix" name="gift" variant="solid"></wa-icon>
+          </wa-menu-item>
+          <wa-menu-item>
+            Suffix Icon
+            <wa-icon slot="suffix" name="heart" variant="solid"></wa-icon>
+          </wa-menu-item>
+        </wa-menu>
+      </wa-dropdown>
+      
+  </body>
+</html>

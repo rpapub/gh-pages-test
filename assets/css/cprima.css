@@ -1,0 +1,96 @@
+/* Linux Biolinum */
+@font-face {
+  font-family: 'Linux Biolinum';
+  src: url('/assets/fonts/LinLibertineTTF/LinBiolinum.woff2') format('woff2'),
+       url('/assets/fonts/LinLibertineTTF/LinBiolinum.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Linux Biolinum';
+  src: url('/assets/fonts/LinLibertineTTF/LinBiolinumB.woff2') format('woff2'),
+       url('/assets/fonts/LinLibertineTTF/LinBiolinumB.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Linux Biolinum';
+  src: url('/assets/fonts/LinLibertineTTF/LinBiolinumI.woff2') format('woff2'),
+       url('/assets/fonts/LinLibertineTTF/LinBiolinumI.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Linux Libertine */
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('/assets/fonts/LinLibertineTTF/LinLibertine.woff2') format('woff2'),
+       url('/assets/fonts/LinLibertineTTF/LinLibertine.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('/assets/fonts/LinLibertineTTF/LinLibertineB.woff2') format('woff2'),
+       url('/assets/fonts/LinLibertineTTF/LinLibertineB.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('/assets/fonts/LinLibertineTTF/LinLibertineI.woff2') format('woff2'),
+       url('/assets/fonts/LinLibertineTTF/LinLibertineI.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('/assets/fonts/LinLibertineTTF/LinLibertineBI.woff2') format('woff2'),
+       url('/assets/fonts/LinLibertineTTF/LinLibertineBI.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noto Mono';
+  src: url('/assets/fonts/NotoMono-Regular.woff2') format('woff2'),
+       url('/assets/fonts/NotoMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Apply fonts globally or selectively */
+body {
+  font-family: 'Linux Libertine', serif !important;
+}
+
+h1, h2 {
+  font-family: 'Linux Biolinum', sans-serif !important;
+}
+
+code, pre {
+  font-family: 'Noto Mono', monospace !important;
+}
+
+:root {
+  --base-bg: #FDF6E3; /* Solarized Light Background */
+  --text-dark: #073642; /* Solarized Dark Text */
+  --highlight-bg: #EEE8D5; /* Solarized Highlight */
+  --accent-orange: #CB4B16; /* Solarized Orange */
+  --header-bg: #CB4B16; /* Orange Header Bar */
+  --header-text: #FDF6E3; /* Solarized Light for Header Text */
+  --bgColor-default: #fdf6e3; /* Solarized Light background */
+  --fgColor-default: #586e75; /* Solarized Light foreground */
+  --fgColor-muted: #839496;
+  --borderColor-default: #93a1a1;
+}
+body {
+  background-color: var(--base-bg);
+  color: var(--text-dark);
+}

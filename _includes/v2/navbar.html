@@ -1,0 +1,39 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const $navbarBurgers = Array.prototype.slice.call(
+      document.querySelectorAll('.navbar-burger'),
+      0
+    );
+    $navbarBurgers.forEach((el) => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  });
+</script>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href={{"/" | relative_url }}>
+      <!--img src="/assets/images/logo.png" alt="Logo" -->
+      <i class="fa-icon fa-duotone fa-regular fa-rocket-launch"></i>
+    </a>
+    <a role="button" class="navbar-burger" id="burger" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="#"><i class="fas fa-code"></i> Snippets</a>
+      <a class="navbar-item" href="#"
+        ><i class="fas fa-graduation-cap"></i> UiPath Core 301</a
+      >
+      <a class="navbar-item" href="#"><i class="fas fa-box"></i> Chocolatey</a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,45 @@
+.navbar {
+    background-color: #cb4b16; /* Solarized Orange */
+    color: #fdf6e3; /* Base3 */
+    margin-bottom: 1.5rem; /* Add space below navbar */
+  }
+
+  .navbar a {
+    color: #fdf6e3; /* Base3 */
+  }
+/* Specific styling for navbar-brand icons */
+.navbar-brand .fa-icon {
+color: #b58900; /* Solarized Yellow */
+}
+
+/* Optional: Add hover effect for consistency */
+.navbar-brand .fa-icon:hover {
+color: #586e75; /* Solarized Base00 (grayish-blue) for contrast */
+transition: color 0.3s ease;
+}
+
+  .navbar-menu {
+background-color: #cb4b16; /* Solarized Orange */
+}
+
+.navbar-menu a {
+color: #fdf6e3 !important; /* Base3 for legible text */
+}
+
+.navbar-menu a:hover {
+background-color: #b58900; /* Solarized Yellow for hover */
+color: #fdf6e3 !important; /* Ensure text is legible on hover */
+}
+
+.navbar-burger {
+color: #fdf6e3 !important; /* Ensure the burger icon is visible */
+}
+
+.navbar-burger.is-active {
+background-color: #cb4b16; /* Match active state with navbar background */
+}
+
+.navbar-item i {
+margin-right: 0.5rem; /* Adds spacing between icon and text */
+vertical-align: middle; /* Aligns the icon with the text */
+}

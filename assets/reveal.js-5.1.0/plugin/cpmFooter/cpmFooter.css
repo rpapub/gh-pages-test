@@ -1,0 +1,10 @@
+#cpmFooter {
+    position: absolute;
+    bottom: 0; /* Align at the very bottom */
+    height: 5%; /* Set height to 5% of the viewport */
+    width: 100%; /* Occupy full width */
+    font-size: 1.5vh; /* Adjust font size as needed */
+    text-align: center; /* Center text */
+    background-color: rgba(0, 0, 0, 0.7); /* Example background color */
+    color: white; /* Example text color */
+}

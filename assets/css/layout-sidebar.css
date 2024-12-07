@@ -1,0 +1,36 @@
+/* Sidebar styling */
+
+
+.sidebar {
+    flex: 1 1 100%; /* Full width by default */
+    background-color: #eee8d5; /* Base2 */
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+  }
+  
+  .sidebar aside {
+    margin-bottom: 1.5rem; /* Space between asides */
+    padding: 0rem; /* Padding inside each aside for better separation */
+    border: 1px solid #eee8d5; /* Optional: Border for visual separation */
+    border-radius: 5px;
+  }
+  
+  /* Override user agent styles for consistent sidebar spacing */
+  .sidebar h2,
+  .sidebar h3 {
+    margin: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .sidebar ul {
+    padding-left: 0; /* Consistent left padding for lists */
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 0.25rem; /* Reduce vertical spacing between list items */
+  }
+  
+  .sidebar i {
+    margin-right: 0.5rem; /* Add spacing between icons */
+  }

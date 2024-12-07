@@ -1,0 +1,22 @@
+<aside class="col-span-1 bg-[var(--highlight-bg)] p-4 shadow rounded">
+  <h2 class="text-lg font-bold text-[var(--text-dark)] mb-2">Sidebar</h2>
+  <ul class="space-y-2">
+    <li><a href={{ "/" | relative_url }} class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">Home</a></li>
+    <li><a href={{ "/lorem.html" | relative_url }} class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">Lorem Ipsum</a></li>
+    <li><a href={{ "/presentation.html" | relative_url }} class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">Presentation</a></li>
+  </ul>
+  <p>…</p>
+  <h2 class="text-lg font-bold text-[var(--text-dark)] mb-2">Gists</h2>
+  <ul class="space-y-2">
+  {% for gist in site.gists %}
+    <li><a href="{{ gist.url | relative_url }}" class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">{{gist.title}}</a></li>
+  {% endfor %}
+  </ul>
+  <p>…</p>
+  <h2 class="text-lg font-bold text-[var(--text-dark)] mb-2">UiPath Core 301</h2>
+  <ul class="space-y-2">
+  {% for lesson in site.uipath-core-301 %}
+    <li><a href="{{ lesson.url | relative_url }}" class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">{{lesson.title}}</a></li>
+  {% endfor %}
+  </ul>
+</aside>

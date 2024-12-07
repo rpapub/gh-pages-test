@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solarized Layout with Shoelace</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/themes/default.css" />
+  <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/webawesome.loader.js"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #fdf6e3; /* Base3 */
+      color: #586e75; /* Base00 */
+    }
+
+    header {
+      background-color: #eee8d5; /* Base2 */
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 2px solid #cb4b16; /* Solarized Orange */
+    }
+
+    .navbar {
+      background-color: #cb4b16; /* Solarized Orange */
+      color: #fdf6e3; /* Base3 */
+    }
+
+    .navbar a {
+      color: #fdf6e3; /* Base3 */
+    }
+
+    .main-layout {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    .main-content {
+      flex: 3;
+      padding: 1.5rem;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #eee8d5; /* Base2 */
+      padding: 1.5rem;
+      border-radius: 5px;
+    }
+
+    .footer {
+      background-color: #eee8d5; /* Base2 */
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #657b83; /* Base01 */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1 class="title is-3">Home - rpapub.cprima.net</h1>
+  </header>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-menu">
+    <div class="navbar-end">
+
+      <!-- Mobile and Tablet: Web Awesome Dropdown -->
+      <div class="is-hidden-desktop">
+        <wa-dropdown>
+          <wa-button slot="trigger" caret>Navigation</wa-button>
+          <wa-menu>
+            <wa-menu-item>Snippets</wa-menu-item>
+            <wa-menu-item>UiPath Core 301</wa-menu-item>
+            <wa-menu-item>Chocolatey</wa-menu-item>
+          </wa-menu>
+        </wa-dropdown>
+      </div>
+
+      <!-- Desktop and Larger: Text Links -->
+      <div class="is-hidden-touch">
+        <a class="navbar-item" href="#">Snippets</a>
+        <a class="navbar-item" href="#">UiPath Core 301</a>
+        <a class="navbar-item" href="#">Chocolatey</a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Main Content -->
+  <main class="main-layout">
+    <div class="main-content">
+      <h2 class="title">Main Content</h2>
+      <!-- Shoelace Alert -->
+      <sl-alert type="primary" open>
+        <sl-icon slot="icon" name="info-circle"></sl-icon>
+        Welcome to the Solarized layout with Shoelace components!
+        <sl-button slot="action" size="small" variant="primary">Got it</sl-button>
+      </sl-alert>
+      <p>This is where your main content goes. Styled with the Solarized Light theme.</p>
+    </div>
+    <aside class="sidebar">
+      <h2 class="title is-4">Navigation</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Lorem Ipsum</a></li>
+        <li><a href="#">Presentation</a></li>
+      </ul>
+      <h3 class="title is-5">Gists</h3>
+      <ul>
+        <li><a href="#">Snippet 1</a></li>
+        <li><a href="#">Snippet 2</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 My Website. All rights reserved.</p>
+    <p>To empower RPA developers with the knowledge, tools, and methodologies...</p>
+  </footer>
+
+</body>
+</html>

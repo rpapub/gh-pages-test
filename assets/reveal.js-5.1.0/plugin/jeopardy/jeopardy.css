@@ -1,0 +1,25 @@
+.jeopardy-game-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    gap: 10px;
+    margin: 20px;
+    text-align: center;
+    align-items: stretch; /* Make all items in a row stretch to the tallest one's height */
+  }
+  .jeopardy-game-container .cell {
+      border: 1px solid #ddd;
+      padding: 20px;
+      background-color: #eee8d5;
+      display: flex; /* Flex layout to allow content to center vertically */
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      min-height: 20px; /* Optional: Set a minimum height for shorter cells */
+  }
+  .jeopardy-game-container .header {
+    font-weight: bold;
+    background-color: #2aa198;
+    color: white;
+  }
+  .jeopardy-game-container .question:hover {
+    background-color: #fdf6e3;
+  }

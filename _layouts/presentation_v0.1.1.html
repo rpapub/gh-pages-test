@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="/assets/reveal.js-5.1.0/dist/reveal.css">
+		<link rel="stylesheet" href="/assets/reveal.js-5.1.0/dist/theme/solarized.css" id="theme">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-solarizedlight.min.css" />
+		<link rel="stylesheet" href={{"/assets/css/prism-custom.css" | relative_url }} />
+
+		<link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/themes/default.css" />
+		<script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/webawesome.loader.js"></script>
+		<link rel="stylesheet" href={{"/assets/css/webawesome-custom.css" | relative_url }} />
+		<script src="https://kit.fontawesome.com/5df958b77d.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href={{"/assets/css/fontawesome-custom.css" | relative_url }} />
+		<link rel="stylesheet" href={{"/assets/css/project-colors.css" | relative_url }} />
+		<link rel="stylesheet" href={{"/assets/css/fonts.css" | relative_url }} />
+		<link rel="stylesheet" href="{{ "/assets/reveal.js-5.1.0/plugin/cpmBroadcastdesign/cpmBroadcastdesign.css" | prepend: site.baseurl }}">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-basic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-vbnet.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-powershell.min.js"></script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+                {{ content }}
+
+			</div>
+
+		</div>
+
+		<script src="/assets/reveal.js-5.1.0/dist/reveal.js"></script>
+		<script src="{{ "/assets/reveal.js-5.1.0/plugin/zoom/zoom.js" | prepend: site.baseurl }}"></script>
+		<script src="{{ "/assets/reveal.js-5.1.0/plugin/notes/notes.js" | prepend: site.baseurl }}"></script>
+		<script src="{{ "/assets/reveal.js-5.1.0/plugin/search/search.js" | prepend: site.baseurl }}"></script>
+		<script src="{{ "/assets/reveal.js-5.1.0/plugin/markdown/markdown.js" | prepend: site.baseurl }}"></script>
+		<script src="{{ "/assets/reveal.js-5.1.0/plugin/highlight/highlight.js" | prepend: site.baseurl }}"></script>
+		<script src="{{ "/assets/reveal.js-5.1.0/plugin/appearance/appearance.js" | prepend: site.baseurl }}"></script>
+		<!-- script src="{{ "/assets/reveal.js-5.1.0/plugin/verticator/verticator.js" | prepend: site.baseurl }}"></script -->
+		<script src="{{ "/assets/reveal.js-5.1.0/plugin/cpmBroadcastdesign/plugin.js" | prepend: site.baseurl }}"></script>
+<script>
+
+			// Full list of configuration options:
+			// https://revealjs.revealjs.com/config/
+			Reveal.initialize({
+				center: true,
+
+				transition: 'linear',
+				// transitionSpeed: 'slow',
+				// backgroundTransition: 'slide'
+
+				cpmBroadcastdesign: {
+					defaults: { tickertext: "Copyright © 2024 Christian Prior-Mamulyan · License CC BY-SA 4.0",
+					visibility: "visible" },
+				},
+				plugins: [ RevealNotes, RevealMarkdown, RevealHighlight, cpmBroadcastdesign  ]
+			});
+			// Ensure Prism.js highlights code after Reveal.js loads
+			Reveal.addEventListener('slidechanged', function(event) {
+				Prism.highlightAll();
+			});
+		</script>
+
+	</body>
+</html>

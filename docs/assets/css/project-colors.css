@@ -1,0 +1,24 @@
+:root {
+    --project-primary: #cb4b16; /* Solarized Orange */
+    --project-secondary: #2aa198; /* Cyan */
+    --project-accent: #b58900; /* Yellow */
+    --background-light: #fdf6e3;
+    --text-color: #586e75;
+  }
+  
+  body {
+    background-color: var(--background-light);
+    color: var(--text-color);
+  }
+  
+  a {
+    color: var(--project-secondary);
+  }
+  
+  a:hover {
+    color: var(--project-primary);
+  }
+
+  .title {
+    color: #657b83; /* Solarized Base00 bryellow */
+  }  

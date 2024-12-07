@@ -1,0 +1,129 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    /* Full width of the slide */
+    height: auto;
+    /* Allow height to adjust based on content */
+    margin: 0 auto;
+    /* Center the carousel */
+    overflow: hidden;
+    /* Hide overflowing images */
+    /*background-color: #fff;*/
+    /* Change background color to white */
+    border-radius: 10px;
+    /* Rounded corners for aesthetics */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* Subtle shadow */
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    /* Center the images horizontally */
+    align-items: center;
+    /* Center the images vertically */
+}
+
+
+.carousel-container img {
+    display: block;
+    /* Ensures no extra space is added below the image */
+    width: auto;
+    /* Allow the width to adjust according to the aspect ratio */
+    height: auto;
+    /* Allow the height to adjust according to the aspect ratio */
+    max-width: 100%;
+    /* Prevents the image from exceeding the container width */
+    max-height: 100%;
+    /* Prevents the image from exceeding the container height */
+    object-fit: contain;
+    /* Ensures the full image is visible, maintaining its aspect ratio */
+    margin: 0;
+    /* Resets any default margins */
+    padding: 0;
+    /* Resets any default padding */
+    border: none;
+    /* Resets any border */
+    overflow: visible;
+    /* Ensures no overflow clipping */
+    vertical-align: middle;
+    /* Centers the image vertically if needed */
+}
+
+.carousel-container img.fullscreen {
+    position: fixed;
+    /* Position it fixed in the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Full viewport width */
+    height: 100vh;
+    /* Full viewport height */
+    z-index: 9999;
+    /* Ensure it is above other content */
+    object-fit: contain;
+    /* Maintain aspect ratio */
+    cursor: pointer;
+    /* Change cursor to pointer */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 0;
+    /* Align the button to the top */
+    bottom: 0;
+    /* Extend the button to the bottom */
+    background-color: #eee8d5;
+    /* Semi-transparent background */
+    color: #fdf6e3;
+    /* Text color */
+    border: none;
+    /* Remove default border */
+    padding: 0 15px;
+    /* Adjust horizontal padding for clickable area */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    z-index: 10;
+    /* Ensure buttons are above other content */
+    font-size: 16px;
+    /* Increase button text size for better visibility */
+    display: flex;
+    /* Use flex to align items */
+    align-items: center;
+    /* Center text vertically */
+}
+
+.carousel-button:before {
+    content: '';
+    display: inline-block;
+    margin-right: 8px;
+    /* Space between text and chevron */
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    /* Create top part of chevron */
+    border-bottom: 8px solid transparent;
+    /* Create bottom part of chevron */
+}
+
+/* Chevron for previous button */
+.carousel-button.prev:before {
+    border-right: 12px solid #fdf6e3;
+    /* Right side for left chevron */
+}
+
+/* Chevron for next button */
+.carousel-button.next:before {
+    border-left: 12px solid #fdf6e3;
+    /* Left side for right chevron */
+    margin-left: 8px;
+    /* Space between text and chevron */
+}
+
+.carousel-button.prev {
+    left: 10px;
+    /* Position for the previous button */
+}
+
+.carousel-button.next {
+    right: 10px;
+    /* Position for the next button */
+}

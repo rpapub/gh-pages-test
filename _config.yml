@@ -1,0 +1,93 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: rpapub.cprima.net
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Future-proof your RPA career with advanced development practices.
+mission-statement: >-
+  To empower RPA developers with the knowledge, tools, and methodologies needed to design scalable, maintainable, and robust automation workflows. Through a series of practical, hands-on lessons, this syllabus bridges the gap between entry-level process automation and advanced development practices, fostering a mindset of continuous improvement, modularity, and test-driven excellence. The goal is to enable developers to create enterprise-grade solutions that enhance productivity, ensure long-term success, and prepare them for the future of intelligent automation.
+baseurl: "/gh-pages-test" # the subpath of your site, e.g. /blog
+url: "https://rpapub.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username: cprima
+
+
+source: .
+destination: ./docs
+collections_dir: collections
+
+# this page is using Prism.js
+highlighter: none
+#gist: #break page layou 2024-12-10
+#  noscript: false
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Build settings
+#theme: minima
+plugins:
+  - jekyll-feed
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+collections:
+  gists:
+    output: true
+    gist_hash: true
+    sort_by: gist_hash
+  uipath-core-301:
+    output: true
+    title: true
+    order:
+      - intro.html
+      - foo.html
+      - bar.html
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "gists"
+    values:
+      layout: "default-gist"

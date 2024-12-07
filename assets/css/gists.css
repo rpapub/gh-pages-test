@@ -1,0 +1,29 @@
+/* Force Solarized Light Colors */
+.gist-data, 
+.gist .gist-file, 
+.gist .Box-body , 
+.gist .gist-meta {
+  background-color: #fdf6e3 !important; /* Solarized Light Background */
+  color: #586e75 !important; /* Solarized Light Foreground */
+  --wa-form-control-background-color: #fdf6e3 !important;
+  --bgColor-default: #fdf6e3 !important;
+}
+
+.gist .gist-file .highlight pre {
+  background-color: #fdf6e3 !important; /* Match code block background */
+  color: #586e75 !important; /* Code text color */
+}
+
+/* Adjust links if needed */
+.gist a {
+  color: #268bd2 !important; /* Solarized Light Blue */
+}
+
+.gist-container {
+  all: unset; /* Resets inherited styles */
+  display: block; /* Ensure it behaves like a block-level element */
+}
+
+.gist-container * {
+  all: revert; /* Revert all inherited or conflicting styles */
+}

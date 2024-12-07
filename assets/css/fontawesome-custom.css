@@ -1,0 +1,6 @@
+/* For consistent sizing */
+.fa-icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem; /* Space between icon and text */
+  vertical-align: middle; /* Align icons with text */
+}

@@ -1,0 +1,47 @@
+:root,
+:host,
+.wa-theme-default-light {
+  /* Base Colors */
+  --wa-color-brand-fill-quiet: #eee8d5; /* Base2 */
+  --wa-color-brand-fill-normal: #93a1a1; /* Base1 */
+  --wa-color-brand-fill-loud: #cb4b16; /* Orange */
+  
+  --wa-color-brand-border-quiet: #93a1a1; /* Base1 */
+  --wa-color-brand-border-normal: #cb4b16; /* Orange */
+  --wa-color-brand-border-loud: #b58900; /* Yellow */
+  
+  --wa-color-brand-on-quiet: #657b83; /* Base00 */
+  --wa-color-brand-on-normal: #586e75; /* Base01 */
+  --wa-color-brand-on-loud: #fdf6e3; /* Base3 */
+  
+  /* Button Colors */
+  --wa-color-primary-fill-normal: #cb4b16; /* Orange */
+  --wa-color-primary-fill-hover: #dc322f; /* Red */
+  --wa-color-primary-fill-active: #b58900; /* Yellow */
+  
+  --wa-color-primary-on-fill: #fdf6e3; /* Base3 */
+  --wa-color-secondary-fill: #93a1a1; /* Base1 */
+  --wa-color-secondary-on-fill: #fdf6e3; /* Base3 */
+  
+  /* Background and Surface */
+  --wa-color-background: #fdf6e3; /* Base3 */
+  --wa-color-surface: #eee8d5; /* Base2 */
+  --wa-color-surface-border: #93a1a1; /* Base1 */
+  
+  /* Typography */
+  --wa-color-text-primary: #586e75; /* Base00 */
+  --wa-color-text-secondary: #657b83; /* Base01 */
+  --wa-color-text-inverse: #fdf6e3; /* Base3 */
+  --wa-color-text-muted: #93a1a1; /* Base1 */
+  
+  /* Focus and Highlight */
+  --wa-color-focus: #d33682; /* Magenta */
+  --wa-color-highlight: #b58900; /* Yellow */
+  
+  /* Shadows */
+  --wa-shadow-color: rgba(88, 110, 117, 0.3); /* Base00 with opacity */
+  
+  /* Borders and Dividers */
+  --wa-border-color: #93a1a1; /* Base1 */
+  --wa-divider-color: #93a1a1; /* Base1 */
+}

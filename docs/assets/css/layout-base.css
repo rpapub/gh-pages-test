@@ -1,0 +1,77 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fdf6e3; /* Base3 */
+    color: #586e75; /* Base00 */
+  }
+
+  header {
+    background-color: #eee8d5; /* Base2 */
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 2px solid #cb4b16; /* Solarized Orange */
+  }
+
+  .footer {
+    background-color: #eee8d5; /* Base2 */
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #657b83; /* Base01 */
+  }
+  .main-layout {
+    flex-grow: 1; /* Makes main take up remaining space */
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Stacks on smaller screens */
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 1.5rem; /* Space between content and sidebar */
+    padding: 1.5rem; /* Padding for layout */
+  }
+
+  .main-content {
+    flex: 1 1 100%; /* Full width by default */
+    padding: 1.5rem;
+  }
+
+
+.container {
+    max-width: 100%;
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        flex: 3;
+    }
+
+    .sidebar {
+        flex: 1;
+    }
+}
+
+/* Custom max-width for Widescreen and FullHD */
+/* kept as reference for convenient future use */
+@media screen and (min-width: 1216px) {
+    .main-content {
+        /* max-width: 900px; Adjust as needed */
+    }
+
+    .sidebar {
+        /* max-width: 300px; Adjust as needed */
+    }
+}
+
+@media screen and (min-width: 1408px) {
+    .main-content {
+        max-width: 1000px;
+        /* Adjust for larger screens */
+    }
+
+    .sidebar {
+        max-width: 350px;
+        /* Adjust for larger screens */
+    }
+}

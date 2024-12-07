@@ -1,0 +1,95 @@
+---
+layout: ng
+title: v2 test ng
+---
+
+<h2 class="title">Main Content</h2>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+  Praesent libero. Sed cursus ante dapibus diam.
+</p>
+
+<wa-divider style="--width: 4px"></wa-divider>
+
+<wa-tab-group>
+  <wa-tab slot="nav" panel="python">Python</wa-tab>
+  <wa-tab slot="nav" panel="custom">VisualBasic</wa-tab>
+  <wa-tab slot="nav" panel="advanced">CSharp</wa-tab>
+  <wa-tab slot="nav" panel="disabled">PowerShell</wa-tab>
+
+  <wa-tab-panel name="python">
+    <pre><code class="language-python">def greet(name):
+  return f"Hello, {name}!"
+  
+print(greet("World"))</code></pre>
+  </wa-tab-panel>
+  <wa-tab-panel name="custom">
+    <pre><code class="language-vbnet">Public Function AddNumbers(a As Integer, b As Integer) As Integer
+      Return a + b
+End Function</code></pre>
+  </wa-tab-panel>
+  <wa-tab-panel name="advanced">
+    <pre><code class="language-csharp">public class Calculator
+{
+  public int AddNumbers(int a, int b)
+  {
+    return a + b;
+  }
+}</code></pre>
+    .</wa-tab-panel
+  >
+  <wa-tab-panel name="disabled">
+    <pre><code class="language-powershell">function Get-Greeting {
+  param([string]$Name)
+  "Hello, $Name!"
+}
+  
+Get-Greeting -Name "World"</code></pre>
+  </wa-tab-panel>
+</wa-tab-group>
+
+<wa-divider style="--width: 4px"></wa-divider>
+
+<wa-image-comparer>
+    <img slot="before"
+        src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80&sat=-100&bri=-5"
+        alt="Grayscale version of kittens in a basket looking around." />
+    <img slot="after"
+        src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+        alt="Color version of kittens in a basket looking around." />
+</wa-image-comparer>
+
+<wa-divider style="--width: 4px"></wa-divider>
+
+<wa-carousel pagination navigation mouse-dragging loop>
+  <wa-carousel-item>
+    <img
+      alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
+      src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=10"
+    />
+  </wa-carousel-item>
+  <wa-carousel-item>
+    <img
+      alt="A river winding through an evergreen forest (by Luca Bravo on Unsplash)"
+      src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=10"
+    />
+  </wa-carousel-item>
+  <wa-carousel-item>
+    <img
+      alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
+      src="https://images.unsplash.com/photo-1499002238440-d264edd596ec?q=10"
+    />
+  </wa-carousel-item>
+  <wa-carousel-item>
+    <img
+      alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
+      src="https://images.unsplash.com/photo-1475113548554-5a36f1f523d6?q=10"
+    />
+  </wa-carousel-item>
+  <wa-carousel-item>
+    <img
+      alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
+      src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=10"
+    />
+  </wa-carousel-item>
+</wa-carousel>

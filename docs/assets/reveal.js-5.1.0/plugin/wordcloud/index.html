@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reveal-wordcloud - rpapub.cprima.net</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href=/assets/css/reset.css />
+  <!-- link rel="stylesheet" href="/assets/css/style.css" //-->
+  <link rel="stylesheet" href=/assets/css/cprima.css />
+  <link rel="stylesheet" href=/assets/css/gists.css />
+  <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/themes/default.css" />
+  <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/webawesome.loader.js"></script>
+
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Header -->
+    <header class="bg-[var(--header-bg)] text-[var(--header-text)] text-center p-4 shadow">
+    <h1 class="text-3xl font-bold">reveal-wordcloud - rpapub.cprima.net</h1>
+  </header>
+
+    <!-- Navigation -->
+  <nav class="bg-[var(--highlight-bg)]">
+    <ul class="flex justify-center space-x-4 p-2">
+      <li>
+        <a href="#" class="text-[var(--text-dark)] hover:bg-[var(--accent-orange)] hover:text-[var(--header-text)] px-4 py-2 block rounded">
+          Snippets
+        </a>
+      </li>
+      <li>
+        <a href="#" class="text-[var(--text-dark)] hover:bg-[var(--accent-orange)] hover:text-[var(--header-text)] px-4 py-2 block rounded">
+          UiPath Core 301
+        </a>
+      </li>
+      <li>
+        <a href="#" class="text-[var(--text-dark)] hover:bg-[var(--accent-orange)] hover:text-[var(--header-text)] px-4 py-2 block rounded">
+          Chocolatey
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Layout -->
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 mt-6 px-4">
+    <!-- Main Section -->
+    <main class="col-span-3 p-6 bg-[var(--highlight-bg)] shadow-md rounded">
+    <h1 id="reveal-wordcloud">reveal-wordcloud</h1>
+<p>A plugin for <a href="https://github.com/hakimel/reveal.js">reveal.js</a> using <a href="https://github.com/timdream/wordcloud2.js">wordcloud2.js</a> for beautiful wordclouds in your slides.</p>
+
+<h2 id="setup">Setup</h2>
+<p>Clone the repository (or download + download wordcloud2) and place in reveal plugin folder.
+Include the plugin in your reveal.js configuration under dependencies:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">dependencies</span><span class="p">:</span>
+ <span class="p">[</span>
+  <span class="c1">// ...</span>
+  <span class="p">{</span> <span class="na">src</span><span class="p">:</span> <span class="dl">'</span><span class="s1">plugin/wordcloud/reveal-wordcloud.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">condition</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="o">!!</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span> <span class="dl">'</span><span class="s1">[wordcloud]</span><span class="dl">'</span> <span class="p">);</span> <span class="p">}</span> <span class="p">},</span>
+  <span class="c1">// ...</span>
+ <span class="p">]</span>
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<p>Add an element to contain the wordcloud (with attribute <code class="language-plaintext highlighter-rouge">wordcloud</code>) to a slide and add the words and weights as below:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Slide with wordcloud<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"stretch"</span> <span class="na">wordcloud</span><span class="nt">&gt;</span>
+30 Les Misérables
+20 Victor Hugo
+15 Jean Valjean
+15 Javert
+15 Fantine
+15 Cosette
+12 Éponine
+12 Marius
+12 Enjolras
+10 Thénardiers
+10 Gavroche
+10 Bishop Myriel
+10 Patron-Minette
+10 God
+8 ABC Café
+8 Paris
+8 Digne
+8 Elephant of the Bastille
+5 silverware
+5 Bagne of Toulon
+5 loaf of bread
+5 Rue Plumet
+5 revolution
+5 barricade
+4 sewers
+4 Fex urbis lex orbis
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+<p>It is also possible to leave out weights, they will then get randomized (between 5 and 20).</p>
+
+<p>It is important that your element gets a good width and height for the wordcloud to fill up. One way is to use the <a href="https://github.com/hakimel/reveal.js#stretching-elements">stretch class from reveal.js</a>.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>Configuration options as per <a href="https://github.com/timdream/wordcloud2.js/blob/gh-pages/API.md#option">wordcloud 2 config options</a> can be added JSON-encoded to the wordcloud attribute.
+For example:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"stretch"</span>  <span class="na">wordcloud=</span><span class="s">'{"weightFactor": 12, "fontFamily": "Fivo Sans Modern, sans-serif", "wait": 70, "shuffle": false, "drawOutOfBound": false}'</span><span class="nt">&gt;</span>
+30 Les Misérables
+20 Victor Hugo
+…
+
+</code></pre></div></div>
+
+<p>reveal-wordcloud defines some default options differently to the defaults in wordcloud2.js. These usually give a good result for presentations:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">shrinkToFit</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nx">shape</span><span class="p">:</span> <span class="dl">'</span><span class="s1">square</span><span class="dl">'</span><span class="p">,</span>
+<span class="nx">weightFactor</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+<span class="nx">gridSize</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+<span class="nx">wait</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+<span class="nx">backgroundColor</span><span class="p">:</span> <span class="dl">''</span>
+</code></pre></div></div>
+
+<p>Experimentation with <code class="language-plaintext highlighter-rouge">weightFactor</code> and <code class="language-plaintext highlighter-rouge">gridSize</code> is often neccessary for best results, depending on the specific words and weights.</p>
+
+<p>Wordclouds are by default drawn each time a slide is reached (with the default <code class="language-plaintext highlighter-rouge">wait</code> of 30ms this is seen as a fast animation).
+If for some reason you navigate back and forward between slides and only want the wordcloud to be drawn on the first activation, add <code class="language-plaintext highlighter-rouge">wordcloud-activate="once"</code> to the wordcloud element.</p>
+
+<h2 id="caveats">Caveats</h2>
+<p>Providing the options in JSON format means there is no way to add custom functions for <code class="language-plaintext highlighter-rouge">weight</code>, <code class="language-plaintext highlighter-rouge">color</code> etc. I’m looking for good solutions for this…</p>
+
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="col-span-1 bg-[var(--highlight-bg)] p-4 shadow rounded">
+  <h2 class="text-lg font-bold text-[var(--text-dark)] mb-2">Sidebar</h2>
+  <ul class="space-y-2">
+    <li><a href=/ class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">Home</a></li>
+    <li><a href=/lorem.html class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">Lorem Ipsum</a></li>
+    <li><a href=/presentation.html class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">Presentation</a></li>
+  </ul>
+  <p>…</p>
+  <h2 class="text-lg font-bold text-[var(--text-dark)] mb-2">Gists</h2>
+  <ul class="space-y-2">
+  
+    <li><a href="/gists/bar.html" class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">Handling the First Item Differently in a Loop in UiPath</a></li>
+  
+    <li><a href="/gists/foo.html" class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">InvokeCode template</a></li>
+  
+  </ul>
+  <p>…</p>
+  <h2 class="text-lg font-bold text-[var(--text-dark)] mb-2">UiPath Core 301</h2>
+  <ul class="space-y-2">
+  
+    <li><a href="/uipath-core-301/bar.html" class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">bar</a></li>
+  
+    <li><a href="/uipath-core-301/foo.html" class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">foo</a></li>
+  
+    <li><a href="/uipath-core-301/intro.html" class="text-[var(--text-dark)] hover:text-[var(--accent-orange)] hover:underline">intro</a></li>
+  
+  </ul>
+</aside>
+
+  </div>
+
+  <!-- Footer -->
+<footer class="bg-[var(--highlight-bg)] text-center p-4 mt-4 shadow">
+  <p class="text-[var(--text-dark)]">
+    &copy; 2024 My Website. All rights reserved.
+  </p>
+  To empower RPA developers with the knowledge, tools, and methodologies needed to design scalable, maintainable, and robust automation workflows. Through a series of practical, hands-on lessons, this syllabus bridges the gap between entry-level process automation and advanced development practices, fostering a mindset of continuous improvement, modularity, and test-driven excellence. The goal is to enable developers to create enterprise-grade solutions that enhance productivity, ensure long-term success, and prepare them for the future of intelligent automation.
+</footer>
+
+  <script src=/assets/js/app.js></script>
+</body>
+</html>

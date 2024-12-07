@@ -1,0 +1,55 @@
+/* CSS for cpmBroadcastdesign plugin */
+
+.lower-third {
+    position: absolute;
+    bottom: 5%; /* Initial position at the bottom */
+    width: 100%;
+    height: 5%; /* Initial height */
+    background-color: rgb(133, 153, 0);
+    color: #002b36;
+    text-align: center;
+    font-size: 24px;
+    /* font-size: 1.5vh; Adjust font size as needed */
+    overflow: hidden; /* Hide content overflow */
+    display: flex; /* Use flexbox for vertical centering */
+    align-items: center; /* Align text vertically center */
+    justify-content: center; /* Align text horizontally center */
+    z-index: 98;
+    transition: height 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  }
+  
+  .lower-third.collapsed {
+    height: 3px; /* Collapsed height */
+    font-size: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .lower-third.expanded {
+    height: 18%; /* Expanded height */
+    font-size: 48px;
+  }
+  
+  .lower-third.hidden {
+    display: none !important;
+  }
+  
+  
+.ticker {
+    position: absolute;
+    bottom: 0; /* Align at the very bottom */
+    height: 5%; /* Set height to 5% of the viewport */
+    width: 100%; /* Occupy full width */
+    font-size: 12px; /* Adjust font size as needed */
+    text-align: center; /* Center text */
+    background-color: rgba(0, 43, 54, 0.9);
+    color: #eee8d5;
+    display: flex; /* Use flexbox for vertical centering */
+    align-items: center; /* Align text vertically center */
+    justify-content: center; /* Align text horizontally center */
+    z-index: 99; /* Ensure ticker appears below lower-third */
+}
+
+
+

@@ -1,0 +1,32 @@
+#custom-content {
+    background-color: #007bff; /* Bright blue background */
+    color: white;             /* White text for contrast */
+    padding: 20px;            /* Some padding around the content */
+    border-radius: 10px;      /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-align: center;       /* Center the text */
+    font-family: 'Arial', sans-serif; /* Modern, readable font */
+    margin: 20px 0;           /* Add some margin above and below the div */
+    transition: transform 0.3s ease-in-out; /* Smooth transformation on hover */
+  }
+  
+  #custom-content:hover {
+    transform: scale(1.05);   /* Slightly enlarge on hover for interactive feel */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow for depth */
+  }
+  
+  #custom-content ul {
+    list-style: none;         /* Remove default list styling */
+    padding: 0;               /* Remove default padding */
+  }
+  
+  #custom-content li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Subtle separators for list items */
+    padding: 10px 0;          /* Padding for each list item */
+    transition: background-color 0.3s ease-in-out; /* Smooth background transition on hover */
+  }
+  
+  #custom-content li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight highlight on hover */
+  }
+  

@@ -1,0 +1,32 @@
+<aside>
+  <aside>
+    <h3 class="title is-5">Gists</h3>
+    <ul>
+      {% for gist in site.gists %}
+      <li><a href="{{ gist.url | relative_url }}">{{gist.title}}</a></li>
+    {% endfor %}
+    </ul>
+  </aside>
+<aside>
+  <h3 class="title is-5">UiPath Core 301</h3>
+  <ul>
+  {% for lesson in site.uipath-core-301 %}
+    <li><a href="{{ lesson.url | relative_url }}">{{lesson.title}}</a></li>
+  {% endfor %}
+  </ul>
+</aside>
+<aside>
+  <h3 class="title is-5">Icons</h3>
+  <i class="fa-solid fa-user"></i>
+  <i class="fa-regular fa-user"></i>
+  <i class="fa-light fa-user"></i>
+  <i class="fa-thin fa-user"></i>
+</aside>
+<aside>
+  <h3 class="title is-5">Sidebar</h2>
+  <ul>
+    <li><a href={{ "/" | relative_url }} >Home</a></li>
+    <li><a href={{ "/v2.html" | relative_url }} >Home v2</a></li>
+    <li><a href={{ "/presentation.html" | relative_url }} >Presentation</a></li>
+  </ul>
+</aside>

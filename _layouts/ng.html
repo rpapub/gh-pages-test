@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{% if title %}{{ site.title }} - {{ title | escape }}{% elsif page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+    <link rel="stylesheet" href={{"/assets/css/reset.css" | relative_url }} />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href={{"/assets/css/bulma-custom-theme.css" | relative_url }} />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-solarizedlight.min.css" />
+    <link rel="stylesheet" href={{"/assets/css/prism-custom.css" | relative_url }} />
+    <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/themes/default.css" />
+    <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/webawesome.loader.js"></script>
+    <link rel="stylesheet" href={{"/assets/css/webawesome-custom.css" | relative_url }} />
+    <script src="https://kit.fontawesome.com/5df958b77d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href={{"/assets/css/fontawesome-custom.css" | relative_url }} />
+
+    <!-- Project Color Preferences -->
+    <link rel="stylesheet" href={{"/assets/css/project-colors.css" | relative_url }} />
+    <!-- Layout -->
+    <link rel="stylesheet" href={{"/assets/css/layout-base.css" | relative_url }} />
+    <link rel="stylesheet" href={{"/assets/css/layout-navbar.css" | relative_url }} />
+    <link rel="stylesheet" href={{"/assets/css/layout-sidebar.css" | relative_url }} />
+    <link rel="stylesheet" href={{"/assets/css/fonts.css" | relative_url }} />
+
+  <link rel="stylesheet" href={{ "/assets/css/gists.css" | relative_url }} />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-basic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-vbnet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-powershell.min.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="title is-3">Home - rpapub.cprima.net</h1>
+    </header>
+
+    <!-- Navbar -->
+{% include v2/navbar.html %}
+
+    <!-- Main Content -->
+    <div class="container is-max-widescreen">
+        <main class="columns is-variable is-8">
+            <!-- Main Content Section -->
+            <div class="column is-12-mobile is-8-desktop is-8-widescreen is-8-fullhd main-content">
+                {{ content }}
+            </div>
+
+            <!-- Sidebar Section -->
+            <div class="column is-12-mobile is-4-desktop is-3-widescreen is-3-fullhd sidebar">
+{% include v2/asides.html %}
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    {% include v2/footer.html %}
+    <script src={{ "/assets/js/app.js" | relative_url }}></script>
+</body>
+
+</html>

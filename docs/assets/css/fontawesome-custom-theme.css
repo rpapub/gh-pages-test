@@ -1,0 +1,34 @@
+/* Custom Font Awesome Icon Styles */
+.fa-icon, 
+.fa-solid, 
+.fa-regular, 
+.fa-light, 
+.fa-thin, 
+.fa-duotone, 
+.fa-brands {
+  color: var(--icon-color, #2aa198); /* Default to Cyan */
+}
+
+/* Alternative Colors */
+.fa-icon-primary {
+  color: #cb4b16; /* Solarized Orange */
+}
+
+.fa-icon-secondary {
+  color: #268bd2; /* Solarized Blue */
+}
+
+/* Add Hover Effects */
+.fa-icon:hover {
+  color: #586e75; /* Base00 for hover */
+  transition: color 0.3s ease;
+}
+
+/* Customize duotone icons */
+.fa-duotone .fa-primary {
+  color: #268bd2; /* Solarized Blue for primary layer */
+}
+
+.fa-duotone .fa-secondary {
+  color: #cb4b16; /* Solarized Orange for secondary layer */
+}

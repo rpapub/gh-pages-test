@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ site.title }} - {{ title | escape }}{% elsif page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href={{ "/assets/css/reset.css" | relative_url }} />
+  <!-- link rel="stylesheet" href="/assets/css/style.css" //-->
+  <link rel="stylesheet" href={{ "/assets/css/cprima.css" | relative_url }} />
+  <link rel="stylesheet" href={{ "/assets/css/gists.css" | relative_url }} />
+  <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/themes/default.css" />
+  <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.4/dist/webawesome.loader.js"></script>
+
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Header -->
+  {% include header.html %}
+
+  {% include nav.html %}
+
+  <!-- Main Content Layout -->
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 mt-6 px-4">
+    <!-- Main Section -->
+    <main class="col-span-3 p-6 bg-[var(--highlight-bg)] shadow-md rounded">
+    {{ content }}
+    </main>
+
+    <!-- Sidebar -->
+    {% include sidebar/default.html %}
+
+  </div>
+
+  <!-- Footer -->
+{% include footer.html %}
+  <script src={{ "/assets/js/app.js" | relative_url }}></script>
+</body>
+</html>

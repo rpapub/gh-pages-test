@@ -1,0 +1,47 @@
+:root {
+    /* Primary color: Solarized Orange */
+    --bulma-primary: #cb4b16;
+    --bulma-primary-rgb: 203, 75, 22;
+    --bulma-primary-h: 18;
+    --bulma-primary-s: 85%;
+    --bulma-primary-l: 45%;
+    --bulma-primary-base: var(--bulma-primary);
+    --bulma-primary-invert: #fdf6e3; /* Base3 */
+    --bulma-primary-light: hsl(var(--bulma-primary-h), var(--bulma-primary-s), 90%);
+    --bulma-primary-light-invert: #cb4b16; /* Reversed primary */
+    --bulma-primary-dark: hsl(var(--bulma-primary-h), var(--bulma-primary-s), 20%);
+    --bulma-primary-dark-invert: #eee8d5; /* Base2 */
+    --bulma-primary-soft: #fdf6e3; /* Base3 */
+    --bulma-primary-bold: #002b36; /* Base03 */
+    --bulma-primary-soft-invert: #586e75; /* Base00 */
+    --bulma-primary-bold-invert: #fdf6e3; /* Base3 */
+  
+    /* Info color */
+    --bulma-info: #268bd2; /* Solarized Blue */
+    --bulma-info-rgb: 38, 139, 210;
+    --bulma-info-invert: #fdf6e3; /* Base3 */
+  
+    /* Success color */
+    --bulma-success: #859900; /* Solarized Green */
+    --bulma-success-rgb: 133, 153, 0;
+    --bulma-success-invert: #fdf6e3; /* Base3 */
+  
+    /* Warning color */
+    --bulma-warning: #b58900; /* Solarized Yellow */
+    --bulma-warning-rgb: 181, 137, 0;
+    --bulma-warning-invert: #fdf6e3; /* Base3 */
+  
+    /* Danger color */
+    --bulma-danger: #dc322f; /* Solarized Red */
+    --bulma-danger-rgb: 220, 50, 47;
+    --bulma-danger-invert: #fdf6e3; /* Base3 */
+  
+    /* Text and background colors */
+    --bulma-text: #586e75; /* Base00 */
+    --bulma-background: #fdf6e3; /* Base3 */
+    --bulma-border: #93a1a1; /* Base1 */
+  
+    /* Link colors */
+    --bulma-link: #2aa198; /* Solarized Cyan */
+    --bulma-link-invert: #fdf6e3; /* Base3 */
+  }
